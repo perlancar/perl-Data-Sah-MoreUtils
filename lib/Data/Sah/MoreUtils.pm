@@ -169,7 +169,7 @@ Options:
 
 =head2 is_numeric($sch[, \%opts]) => BOOL
 
-Currently, only C<num>, C<int>, and B<float> are numeric.
+Currently, only C<num>, C<int>, and C<float> are numeric.
 
 =head2 is_ref($sch[, \%opts]) => BOOL
 
