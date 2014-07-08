@@ -4,6 +4,7 @@ use 5.010001;
 use strict;
 use warnings;
 
+# DATE
 # VERSION
 
 require Exporter;
@@ -45,10 +46,11 @@ sub get_type {
 }
 
 sub _normalize {
+    require Data::Sah::Normalize;
+
     my ($sch, $opts) = @_;
     return $sch if $opts->{schema_is_normalized};
-    require Data::Sah;
-    return Data::Sah::normalize_schema($sch);
+    return Data::Sah::Normalize::normalize_schema($sch);
 }
 
 # for any|all to pass a criteria, we assume that all of the schemas in the 'of'
